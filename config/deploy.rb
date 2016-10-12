@@ -17,7 +17,6 @@ set :keep_releases, 5
 
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 
+set :whenever_identifier, -> { "#{fetch(:application)}_#{fetch(:stage)}" }
 
-set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
-
-after 'deploy:publishing', 'unicorn:stop', 'unicorn:start'
+after 'deploy:publishing', 'unicorn:restart'

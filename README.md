@@ -8,7 +8,7 @@ https://gems.ruby-china.com
 
 ### 架构情况
 
-![image](https://github.com/ruby-china/rubygems-mirror/assets/5518/f62fd875-9c42-46e4-936a-11cf66de6198)
+![image](https://github.com/ruby-china/rubygems-mirror/assets/5518/9132a733-a4ef-4d93-995e-8d7e2b6a6f5b)
 
 ## IP 黑名单
 

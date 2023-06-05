@@ -6,38 +6,9 @@ https://gems.ruby-china.com
 
 这是由 Ruby China 官方搭建的 RubyGems 镜像网站，此仓库是服务器源代码。
 
-### 后端服务器列表
-
-- http://us0.gems.ruby-china.com [Removed]
-- http://us1.gems.ruby-china.com [Removed]
-- http://sh0.gems.ruby-china.com [Online]
-
 ### 架构情况
 
-```
-                                          [gems.ruby-china.com]
-                                                     |
-                                     [sh0.gems.ruby-china.com <Shanghai>]
-                                                     |
-                                                  [Nginx]
-                                                     |
-                ---------------------------------------------------------------------------------------
-                |                                    |                          |                     |
-    {*.4.8, *.4.8.gz}                          {/gems, /quick}                 {/}                 {/api}
-               |                                     |                          |                     |
-  [upyun.gems.ruby-china.com]      <upyun.gems.ruby-china.com>    [app server]          [bundler-api]
-                                                     |
-                                                [UpYun CDN]
-                                                     |
-                                           ----------------------
-                                           Found             Not Found
-                                            |                   |
-                                          [200]       [rubygems.global.ssl.fastly.net]
-                                                                |
-                                                              [200] ------------> [UpYun Mirror Store]
-
-```
-
+![image](https://github.com/ruby-china/rubygems-mirror/assets/5518/f62fd875-9c42-46e4-936a-11cf66de6198)
 
 ## IP 黑名单
 
